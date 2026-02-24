@@ -59,7 +59,7 @@ my-portfolio/
 
 ## 🙋‍♂️ Author
 **Yaswanth Kommineni**  
-[LinkedIn](https://linkedin.com/in/yaswanth)  
+[LinkedIn](https://linkedin.com/in/yaswanthk6767)  
 [GitHub](https://github.com/KommineniYaswanth)
 
 ## 📄 License
