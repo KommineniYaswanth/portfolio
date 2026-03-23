@@ -15,7 +15,7 @@ export default function Home() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        Hi, I'm Yaswanth <span role="img" aria-label="wave">👋</span>
+        Hi, I'm Yaswanth <span role="img" aria-label="wave"></span>
       </motion.h1>
 
       <motion.h3
@@ -24,7 +24,7 @@ export default function Home() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.4, duration: 0.5 }}
       >
-        Senior Java Full Stack Developer
+        <span className="typewriter">Senior Java Full Stack Developer</span>
       </motion.h3>
 
       <motion.p

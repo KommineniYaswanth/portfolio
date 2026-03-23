@@ -9,10 +9,13 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
 
+import ParticleBackground from "./components/ParticleBackground";
+
 function AppContent() {
   const location = useLocation();
   return (
     <div className="app">
+      <ParticleBackground />
       <Navbar />
       <main className="main-content">
         <AnimatePresence exitBeforeEnter>

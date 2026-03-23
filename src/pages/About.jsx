@@ -28,7 +28,7 @@ export default function About() {
       </motion.p>
 
       <motion.h3
-        className="text-2xl font-semibold mb-2 modern-heading"
+        className="text-2xl font-semibold mb-4 modern-heading"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.6, duration: 0.5 }}
@@ -36,17 +36,25 @@ export default function About() {
         Skills
       </motion.h3>
 
-      <motion.ul
-        className="list-disc list-inside space-y-1 modern-text about-skills-list"
+      <motion.div
+        className="skills-section"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.8, duration: 0.5 }}
       >
-        <li>Java, Spring Boot, Microservices</li>
-        <li>React, TypeScript, HTML, CSS</li>
-        <li>AWS, Docker, Kubernetes</li>
-        <li>MySQL, PostgreSQL, MongoDB</li>
-      </motion.ul>
+        {[
+          { title: "Programming Languages", values: ["Java 8/11/17", "SQL", "PL/SQL", "Python", "R"] },
+          { title: "Web Technologies", values: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "jQuery", "Bootstrap", "Angular"] },
+          { title: "J2EE / Backend", values: ["Servlets", "EJB", "JSF", "JDBC", "SOAP", "REST", "Hibernate", "Spring Boot", "Spring MVC"] },
+          { title: "Databases", values: ["Oracle", "MySQL", "PostgreSQL", "MongoDB", "Cassandra"] },
+          { title: "Cloud & DevOps", values: ["AWS (EC2, S3, RDS, Lambda, EKS, SQS)", "Azure", "Docker", "Kubernetes", "CI/CD"] },
+        ].map((group) => (
+          <div key={group.title} className="skill-card">
+            <h4 className="skill-card-title">{group.title}</h4>
+            <div className="skill-chip-grid">{group.values.map((value) => <span key={value} className="skill-chip">{value}</span>)}</div>
+          </div>
+        ))}
+      </motion.div>
     </motion.div>
   );
 }
